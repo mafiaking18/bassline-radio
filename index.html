@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BASSLINE Radio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar with Station Icons -->
+  <nav class="navbar navbar-dark px-4 py-3">
+    <div class="d-flex justify-content-between w-100 align-items-center">
+      <a class="navbar-brand" href="#"><img src="images/bassline-logo-white.png" alt="BASSLINE Logo" width="120"  /></a>
+      <button class="navbar-toggler border-0" type="button" onclick="toggleMenu()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+  
+  <!-- Sliding Fullscreen Nav -->
+  <div id="overlayMenu" class="overlay-menu">
+    <button class="overlay-close" onclick="closeMenu()">×</button>
+    <div class="overlay-content">
+      <a href="index.html">Home</a>
+      <a href="dnb.html" onclick="closeMenu()" class="station-dnb">DNB</a>
+      <a href="#anthems" onclick="closeMenu()" class="station-anthems">Anthems</a>
+      <a href="#90s" onclick="closeMenu()" class="station-90s">90s</a>
+      <a href="#garage" onclick="closeMenu()" class="station-garage">Garage</a>
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </div>
+  
+
+  <!-- Hero Carousel -->
+  <header>
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/hero-friday-nights.png" class="d-block w-100" alt="Slide 1">
+        </div>
+        <div class="carousel-item">
+          <img src="images/hero-ibiza.png" class="d-block w-100" alt="Slide 2">
+        </div>
+        <div class="carousel-item">
+          <img src="images/hero-g-selecta.png" class="d-block w-100" alt="Slide 3">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Station Sections -->
+   <!--Main Station-->
+  <main class="container-fluid px-4 py-5 text-light">
+    <h2>LISTEN NOW</h2>
+    <section id="main" class="py-5">
+      <div class="row align-items-center text-light">
+        <div class="col-md-6 mb-4 mb-md-0 show-info">
+          <img src="images/bassline-logo.svg" class="mb-3" alt="BASSLINE Radio" width="100" />
+          <p>Your non-stop home for the freshest dance, house and electronic beats.</p>
+          <span class="badge rounded-pill px-3 py-2 mb-3" style="background-color: #1400ff; color: #fff;">
+            🎵 Now Playing: Tell Me - Sonny Fodera ft. Clementine Douglas
+          </span>
+          <br />
+          <a href="bassline-radio.html" class="btn btn-outline-light">Explore More</a>
+        </div>
+    
+        <div class="col-md-6 text-center">
+          <img id="main-now-img" src="images/presenter-main.png" alt="Now Playing" class="now-playing-img mb-3" width="120" height="120" style="object-fit: cover;">
+          <div id="main-now-time" class="mb-1 fw-bold"><p>10:00-13:00</p></div>
+          <div id="main-now-title" class="mb-2"><h6>Daytime Dance with Kenzo</h6></div>
+          <div id="main-now-description" class="mb-2"><p>Kenzo has house & electronic music to keep you moving.</p></div>
+          <span class="badge bg-danger">LIVE</span>
+        </div>
+      </div>
+    </section>
+
+    <!--DNB Station-->
+    <section id="dnb" class="py-5">
+      <div class="row align-items-center text-light">
+        <div class="col-md-6 mb-4 mb-md-0 show-info">
+          <img src="images/dnb-icon.png" class="mb-3" alt="BASSLINE DNB" width="100" />
+          <p>High-octane drum & bass energy, 24/7—pure adrenaline for your day.</p>
+          <span class="badge rounded-pill px-3 py-2 mb-3" style="background-color: #4efe2f; color: #000;">
+            🎵 Now Playing: Mixed Emotions - Chase & Status
+          </span><br />
+          <a href="dnb.html" class="btn btn-outline-light">Explore More</a>
+        </div>
+        <div class="col-md-6 text-center">
+          <img id="dnb-now-img" src="images/presenter-dnb.png" alt="Now Playing" class="now-playing-img mb-3" />
+          <div id="dnb-now-time" class="mb-1 fw-bold">11:00–14:00</div>
+          <div id="dnb-now-title" class="mb-2"><h6>Old Skool Rollers</h6></div>
+          <div id="dnb-now-description" class="mb-2">Heavy hitters, deep rollers, and breakbeat goodness.</div>
+          <span class="badge bg-danger">LIVE</span>
+        </div>
+      </div>
+    </section>
+    
+
+    <!--Anthems Station-->
+    <section id="anthems" class="py-5">
+      <div class="row align-items-center text-light">
+        <div class="col-md-6 mb-4 mb-md-0 show-info">
+          <img src="images/anthems-icon.png" class="mb-3" alt="BASSLINE Anthems" width="100" />
+          <p>All the iconic floorfillers and festival classics you know and love.</p>
+          <span class="badge rounded-pill px-3 py-2 mb-3" style="background-color: #b500ff; color: #fff;">
+            🎵 Now Playing: Won't Look Back - Duke Dumont
+          </span><br />
+          <a href="bassline-anthems.html" class="btn btn-outline-light">Explore More</a>
+        </div>
+        <div class="col-md-6 text-center">
+          <img id="anthems-now-img" src="images/presenter-anthems.png" alt="Now Playing" class="now-playing-img mb-3" />
+          <div id="anthems-now-time" class="mb-1 fw-bold">11:00–12:00</div>
+          <div id="anthems-now-title" class="mb-2"><h6>The Calvin Harris Mix with Katie</h6></div>
+          <div id="anthems-now-description" class="mb-2">Classic club tracks and non-stop party vibes.</div>
+          <span class="badge bg-danger">LIVE</span>
+        </div>
+      </div>
+    </section>
+    
+
+    <!--90s Station-->
+    <section id="nineties" class="py-5">
+      <div class="row align-items-center text-light">
+        <div class="col-md-6 mb-4 mb-md-0 show-info">
+          <img src="images/nineties-icon.png" class="mb-3" alt="BASSLINE 90s" width="100" />
+          <p>Relive the rave. Old skool house, techno and 90s club culture.</p>
+          <span class="badge rounded-pill px-3 py-2 mb-3" style="background-color: #ff004d; color: #fff;">
+            🎵 Now Playing: Papa New Guinea - The Future Sound of London
+          </span><br />
+          <a href="bassline-90s.html" class="btn btn-outline-light">Explore More</a>
+        </div>
+        <div class="col-md-6 text-center">
+          <img id="90s-now-img" src="images/presenter-90s.png" alt="Now Playing" class="now-playing-img mb-3" />
+          <div id="90s-now-time" class="mb-1 fw-bold">10:00–12:00</div>
+          <div id="90s-now-title" class="mb-2"><h6>Sounds of the Haçienda with Mark</h6></div>
+          <div id="90s-now-description" class="mb-2">Showcasing the tunes that defined the legendary Haçienda.</div>
+          <span class="badge bg-danger">LIVE</span>
+        </div>
+      </div>
+    </section>
+    
+
+    <!--Garage Station-->
+    <section id="garage" class="py-5">
+      <div class="row align-items-center text-light">
+        <div class="col-md-6 mb-4 mb-md-0 show-info">
+          <img src="images/garage-icon.png" class="mb-3" alt="BASSLINE Garage" width="100" />
+          <p>UKG all day—2-step, speed garage and underground London vibes.</p>
+          <span class="badge rounded-pill px-3 py-2 mb-3" style="background-color: #00baff; color: #000;">
+            🎵 Now Playing: WHERE'S MY VAPE? - Oppidan
+          </span><br />
+          <a href="bassline-garage.html" class="btn btn-outline-light">Explore More</a>
+        </div>
+        <div class="col-md-6 text-center">
+          <img id="garage-now-img" src="images/presenter-garage.png" alt="Now Playing" class="now-playing-img mb-3" />
+          <div id="garage-now-time" class="mb-1 fw-bold">10:30–12:30</div>
+          <div id="garage-now-title" class="mb-2"><h6>It’s A London Thing</h6></div>
+          <div id="garage-now-description" class="mb-2">The freshest garage from across the UK underground.</div>
+          <span class="badge bg-danger">LIVE</span>
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- News Section -->
+    <section class="row g-4 my-5">
+      <div class="col-md-6">
+        <div class="p-4 bg-dark rounded">
+          <h3>Skrillex Surprise Releases New Album</h3>
+          <p>Skrillex has unveiled a surprise 34-track album titled 'F*CK U SKRILLEX YOU THINK UR ANDY WARHOL BUT UR NOT!!'. This release appears to fulfill his final project for Atlantic Records and marks his shift towards working as an independent artist.</p>
+        </div>
+      </div>
+      <div class="col-md-6 d-flex flex-column gap-4">
+        <div class="p-3 bg-dark rounded">
+          <h5>Tomorrowland Launches Competition to Win a DJ Set at This Year’s Festival</h5>
+        </div>
+        <div class="p-3 bg-dark rounded">
+          <h5>Marshmello Returns to Roots with 'Worlds Apart' Collaboration</h5>
+        </div>
+        <div class="p-3 bg-dark rounded">
+          <h5>Glastonbury's Silver Hayes Lineup Announced</h5>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ibiza Giveaway -->
+    <section class="giveaway row g-4 align-items-center bg-primary-subtle text-dark rounded p-4 my-5" id="ibiza-giveaway">
+      <div class="col-md-6">
+        <h2>WIN FREE TICKETS TO IBIZA</h2>
+        <p>Enter now for a chance to win an exclusive trip to Amnesia in Ibiza this summer!</p>
+        <a href="giveaway.html" class="btn btn-primary">Enter Now</a>
+      </div>
+      <div class="col-md-6">
+        <img src="images/win-free-tickets-promo.png" class="img-fluid rounded" alt="Ibiza Giveaway">
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-center text-light py-4 mt-5" id="footer">
+    <img src="images/bassline-logo-white.png" alt="BASSLINE Logo" width="100" class="mb-3" />
+    <nav class="d-flex justify-content-center gap-4">
+      <a href="bassline-dnb.html" class="text-light">DNB</a>
+      <a href="bassline-anthems.html" class="text-light">Anthems</a>
+      <a href="bassline-90s.html" class="text-light">90s</a>
+      <a href="bassline-garage.html" class="text-light">Garage</a>
+      <a href="privacy-policy.html" class="text-light">Privacy</a>
+      <a href="terms.html" class="text-light">Terms</a>
+    </nav>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
